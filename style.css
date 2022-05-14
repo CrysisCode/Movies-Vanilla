@@ -1,0 +1,12 @@
+html body {
+    color:#fff;
+    background-color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+.description {
+    text-align: justify;
+}
