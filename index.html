@@ -7,21 +7,22 @@
     <title>Night TV</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src='script.js'></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script type='text/javascript' src='script.js'></script>
+    <script src='/node_modules/@popperjs/core/dist/umd/popper.min.js'></script>
+	  <script src='/node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-warning mb-4">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-warning mb-5">
         <div class="container-fluid">
-            <h1 class="text-center mb-2 mt-2 col-12">Night TV</h1>
+            <h2 class="text-center mb-2 mt-2 col-6">Night TV</h2>
+            <h5 class="total price text-center mb-2 mt-2 col-6">Total price:</h5>
         </div>
       </nav>
-    <div class="container text-center d-flex">
-    <ul class="px-0 movies-list text-center row d-flex align-items-center">
-        <li class="col-12 mb-4">
+    <div class="container text-center d-flex mt-5">
+    <ul class="px-0 movies-list text-center row d-flex align-items-center mt-5">
+        <li class="movie-item col-12 mb-4">
             <div class="card text-black">
                 <img src="/Images/share.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -29,11 +30,13 @@
                   <p class="card-text">When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.</p>
                   <h5 class="rating">Rate the movie</h5>
                   <h6 class="price">Price: <spa>19$</spa></h6>
-                  <a href="#" class="btn btn-warning">Pay and watch</a>
+                  <div class="d-flex align-items-baseline justify-content-between" id="buttonArea">
+                  <button onclick="payAndWatch(this)" id="payAndWatch" class="btn btn-warning">Pay and watch</button>
+                </div>
                 </div>
               </div>
         </li>
-        <li class="movie-item col-12 mb-5 text-center">
+        <li class="movie-item col-12 mb-4">
             <div class="card text-black">
                 <img src="/Images/avatar.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -41,11 +44,13 @@
                   <p class="card-text">Jake, who is paraplegic, replaces his twin on the Na'vi inhabited Pandora for a corporate mission. After the natives accept him as one of their own, he must decide where his loyalties lie.</p>
                   <h5 class="rating">Rate the movie</h5>
                   <h6 class="price">Price: <spa>19$</spa></h6>
-                  <a href="#" class="btn btn-warning">Pay and watch</a>
+                  <div class="d-flex align-items-baseline justify-content-between" id="buttonArea">
+                  <button onclick="payAndWatch(this)" id="payAndWatch" class="btn btn-warning">Pay and watch</button>
+                </div>
                 </div>
               </div>
         </li>
-        <li class="movie-item col-12 mb-5">
+        <li class="movie-item col-12 mb-4">
             <div class="card text-black">
                 <img src="/Images/joker2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -53,12 +58,19 @@
                   <p class="card-text">A mentally troubled stand-up comedian embarks on a downward spiral that leads to the creation of an iconic villain.</p>
                   <h5 class="rating">Rate the movie</h5>
                   <h6 class="price">Price: <spa>19$</spa></h6>
-                  <a href="#" class="btn btn-warning">Pay and watch</a>
+                  <div class="d-flex align-items-baseline justify-content-between" id="buttonArea">
+                  <button onclick="payAndWatch(this)" id="payAndWatch" class="btn btn-warning">Pay and watch</button>
+                </div>
                 </div>
               </div>
         </li>
     </ul>
     </div>
+    <footer class="navbar fixe navbar-expand-lg navbar-dark bg-warning">
+      <div class="container-fluid">
+          <h4 class="footer-text text-center mt-2 col-12">Tarik Topić</h4>
+      </div>
+    </footer>
 </body>
 
 </html>
