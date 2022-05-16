@@ -21,24 +21,13 @@ function payAndWatch(element) {
     buttonArea.appendChild(removeButton);
     
     button.setAttribute('disabled', 'true');
-
 }
 
 function remove(element) {
-    let button = element;
+    let button = element.closest('#buttonArea');
     let info = document.querySelector('#info');
-    let payButton = document.querySelector('.btn-warning');
 
-
-    if(payButton.hasAttribute('disabled')) {
-        payButton.removeAttribute('disabled');
-    }
-
-let movie = document.querySelectorAll('.movie-item');
-movie.forEach(function(element) {
-    console.log(movie);
-});
-
+    console.log(button);
+    button.remove();    
     info.remove();
-    button.remove();
 }
