@@ -6,6 +6,10 @@ function payAndWatch(element) {
     let button = element; //varijabli button dodan argument element a u html-u dodan this tako da se zna koji se button klika
     let buttonArea = button.closest('#buttonArea'); //button trazi najblizi element sa atributom #buttonArea
     
+    let elContainer = document.createElement('div');
+    elContainer.classList = 'd-flex align-items-baseline justify-content-between';
+    elContainer.setAttribute('id', 'elContainer');
+
     let removeButton = document.createElement('button');
     removeButton.classList = 'btn btn-danger';
     removeButton.innerText = 'Empty the cart';
@@ -17,17 +21,27 @@ function payAndWatch(element) {
     info.innerText = 'In the cart';
     info.setAttribute('id','info');
 
-    buttonArea.appendChild(info);
-    buttonArea.appendChild(removeButton);
+    buttonArea.appendChild(elContainer)
+    elContainer.appendChild(info);
+    elContainer.appendChild(removeButton);
     
     button.setAttribute('disabled', 'true');
 }
 
 function remove(element) {
-    let button = element.closest('#buttonArea');
-    let info = document.querySelector('#info');
+    let mainEl = element.closest('#elContainer');
+    mainEl.remove();  
+    console.log(mainEl);
+    let name = document.querySelector('h3').innerText;
+    console.log(name);
+  
+    let movies = document.querySelectorAll('.movie-item');
+movies.forEach(function(movie) {
+    let movieName = document.querySelector('.card-title').innerText;
 
-    console.log(button);
-    button.remove();    
-    info.remove();
+    if(movieName === name){
+    movie.querySelector('#payAndWatch').removeAttribute('disabled');
+    }
+});
+    
 }
