@@ -32,16 +32,13 @@ function remove(element) {
     let mainEl = element.closest('#elContainer');
     mainEl.remove();  
     console.log(mainEl);
-    let name = document.querySelector('h3').innerText;
-    console.log(name);
-  
-    let movies = document.querySelectorAll('.movie-item');
-movies.forEach(function(movie) {
-    let movieName = document.querySelector('.card-title').innerText;
-
-    if(movieName === name){
-    movie.querySelector('#payAndWatch').removeAttribute('disabled');
-    }
-});
-    
 }
+
+function removeDisabled(element){
+    let button = element;
+    buttonArea = element.closest('#buttonArea');
+    if(button.hasAttribute('disabled')){
+        button.removeAttribute('disabled');
+    }
+}
+    
